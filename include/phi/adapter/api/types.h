@@ -241,6 +241,7 @@ enum class ChannelKind : quint16 {
     Duration              = 65,  // Duration in seconds, ChannelDataType::Int/Float
     Contact               = 66,  // Contact sensor (open/closed), ChannelDataType::Bool
     Tamper                = 67,  // Tamper/sabotage detection, ChannelDataType::Bool
+    AmbientLightLevel     = 68,  // Ambient light level class (e.g. dark/dim/bright), ChannelDataType::Enum
 
     // --------------------------------------------------------------------
     // POOL / WATER QUALITY SENSORS
