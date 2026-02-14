@@ -1,0 +1,15 @@
+Package: phi-adapter-api-dev
+Source: phi-adapter-api
+Version: 0.0~git20260214.7b09b73-1
+Architecture: all
+Maintainer: Marius Schumacher <marius.schumacher@phisys.com>
+Installed-Size: 77
+Depends: qt6-base-dev
+Section: libdevel
+Priority: optional
+Homepage: https://github.com/phi-systems-tech/phi-adapter-api
+Description: Public C++ adapter API for PHI adapter development
+ Header-only C++ API used by PHI adapter plugins.
+ .
+ This package provides public headers and CMake package config files
+ for building custom PHI adapters.

@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: phi-adapter-api
+Source: https://github.com/phi-systems-tech/phi-adapter-api
+
+Files: *
+Copyright: 2026 PHI Systems Tech
+License: Proprietary
+ This package is distributed under the terms provided in the upstream
+ LICENSE file.
