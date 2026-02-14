@@ -3,7 +3,10 @@ Upstream-Name: phi-adapter-api
 Source: https://github.com/phi-systems-tech/phi-adapter-api
 
 Files: *
-Copyright: 2026 PHI Systems Tech
-License: Proprietary
- This package is distributed under the terms provided in the upstream
- LICENSE file.
+Copyright: 2026 Phisys Ltd. (Switzerland)
+License: LGPL-3+
+ This package is licensed under the GNU Lesser General Public License,
+ version 3 or later.
+ .
+ On Debian systems, the full text of the LGPL-3 license can be found in:
+ /usr/share/common-licenses/LGPL-3

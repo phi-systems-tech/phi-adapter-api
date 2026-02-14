@@ -2,6 +2,16 @@
 
 Header-only API for phi adapter development (Qt plugin).
 
+## Package Dependency Model
+
+`phi-adapter-api-dev` is intentionally kept slim.
+
+- It provides public headers and CMake package files for adapter development.
+- It does **not** provide a full packaging/build toolchain (`cmake`, `ninja`, `debhelper`, etc.).
+
+For PHI package builders, install `phi-packaging-dev` on build hosts to get the
+complete baseline toolchain.
+
 ## Adapter README Template
 
 Use the common adapter documentation template from:
