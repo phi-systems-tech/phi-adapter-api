@@ -8,3 +8,4 @@ debian/*.substvars
 debian/*/DEBIAN/
 debian/*/usr/
 debian/*/var/
+debian/debhelper-build-stamp
