@@ -26,15 +26,27 @@ All `phi-adapter-*` repositories should follow this structure to keep documentat
 
 For all adapter implementations:
 
-- Numeric enums must keep real device values (do not normalize to `1..N`).
-- Text enums may use stable internal mapping when cross-device normalization is needed.
-- Keep raw <-> internal mapping metadata so write-back always sends the original protocol value.
+- Normalize enum values to numeric IDs only when they map to a canonical enum in
+  `types.h` (for example `RockerMode`, `SensitivityLevel`, `OperatingLevel`, `PresetMode`).
+- If a vendor enum cannot be fully mapped to a canonical enum, keep it as raw string
+  (for states and choices) and avoid synthetic numeric IDs.
+- For normalized enums, keep raw <-> canonical mapping metadata so write-back sends
+  the original protocol value.
 
 Rationale:
 
 - UI preselection remains correct for current values.
 - Automations operate on real device semantics.
 - Different devices with different numeric ranges stay unambiguous.
+
+### Canonical Enum Types (`types.h`)
+
+Current canonical enums intended for `ChannelDataType::Enum` normalization:
+
+- `RockerMode`: `SingleRocker`, `DualRocker`, `SinglePush`, `DualPush`
+- `SensitivityLevel`: `Low`, `Medium`, `High`, `VeryHigh`, `Max`
+- `OperatingLevel`: `Off`, `Low`, `Medium`, `High`, `Auto`
+- `PresetMode`: `Eco`, `Normal`, `Comfort`, `Sleep`, `Away`, `Boost`
 
 ### Runtime and Transport Design
 

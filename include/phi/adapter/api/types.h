@@ -169,6 +169,27 @@ enum class SensitivityLevel : quint8 {
 };
 Q_ENUM_NS(SensitivityLevel)
 
+enum class OperatingLevel : quint8 {
+    Unknown = 0,
+    Off     = 1,
+    Low     = 2,
+    Medium  = 3,
+    High    = 4,
+    Auto    = 5
+};
+Q_ENUM_NS(OperatingLevel)
+
+enum class PresetMode : quint8 {
+    Unknown = 0,
+    Eco     = 1,
+    Normal  = 2,
+    Comfort = 3,
+    Sleep   = 4,
+    Away    = 5,
+    Boost   = 6
+};
+Q_ENUM_NS(PresetMode)
+
 // ============================================================================
 // COLOR CAPABILITIES (for ChannelKind::ColorRGB)
 // ============================================================================
