@@ -22,6 +22,17 @@ All `phi-adapter-*` repositories should follow this structure to keep documentat
 
 ## Adapter Development Rules
 
+### Channel Naming Policy
+
+Adapters are the source of truth for channel labels.
+
+- Set `Channel::name` to a clear, user-facing label in English.
+- Labels must be stable across reconnect/restart for the same physical channel.
+- Labels must be unique per device where channels would otherwise collide.
+  Example: use `Button 1`, `Button 2`, `Button 3`, `Button 4` instead of repeating `Button`.
+- Do not rely on UI-side renaming/normalization by `ChannelKind`; UI should display adapter-provided names.
+- Use `externalId` as a technical identifier; it is not a substitute for a human-readable label.
+
 ### Enum Mapping Policy
 
 For all adapter implementations:
