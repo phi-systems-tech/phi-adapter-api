@@ -4,9 +4,8 @@ Source: https://github.com/phi-systems-tech/phi-adapter-api
 
 Files: *
 Copyright: 2026 Phisys Ltd. (Switzerland)
-License: LGPL-3+
- This package is licensed under the GNU Lesser General Public License,
- version 3 or later.
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0.
  .
- On Debian systems, the full text of the LGPL-3 license can be found in:
- /usr/share/common-licenses/LGPL-3
+ On Debian systems, the full text of the Apache-2.0 license can be found in:
+ /usr/share/common-licenses/Apache-2.0

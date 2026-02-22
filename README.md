@@ -125,3 +125,7 @@ This policy applies to:
 - `phi-adapter-api-dev`
 - all `phi-adapter-*-dev` packages
 - related adapter meta-packages
+
+## License
+
+Licensed under Apache License 2.0. See `LICENSE`.
