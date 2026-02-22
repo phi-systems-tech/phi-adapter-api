@@ -16,6 +16,8 @@
 #include "scene.h"
 #include "adapterconfig.h"
 
+namespace phicore { class AdapterManager; }
+
 Q_DECLARE_LOGGING_CATEGORY(adapterLog)
 
 namespace phicore::adapter {
@@ -26,6 +28,7 @@ class AdapterInterface : public QObject
 {
     Q_OBJECT
     friend class AdapterManager;
+    friend class ::phicore::AdapterManager;
 
 public:
     explicit AdapterInterface(QObject *parent = nullptr) : QObject(parent) {}
