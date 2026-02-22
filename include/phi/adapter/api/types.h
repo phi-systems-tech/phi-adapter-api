@@ -6,7 +6,7 @@
 #include <QVariantList>
 #include <QString>
 
-namespace phicore {
+namespace phicore::adapter {
 
 #if !defined(PHICORE_Q_NAMESPACE_DEFINED) || defined(Q_MOC_RUN)
 #ifndef PHICORE_Q_NAMESPACE_DEFINED
@@ -315,7 +315,7 @@ enum class ChannelDataType : quint8 {
     Int     = 2,  // Canonical: integer with semantics depending on ChannelKind
     Float   = 3,  // Canonical: floating point with semantics depending on ChannelKind
     String  = 4,
-    Color   = 5,  // Canonical: phicore::Color (sRGB, components in [0, 1]) - see phicolor.h
+    Color   = 5,  // Canonical: phicore::adapter::Color (sRGB, components in [0, 1]) - see phicolor.h
     Enum    = 6
 };
 Q_ENUM_NS(ChannelDataType)
@@ -456,9 +456,9 @@ Q_DECLARE_FLAGS(AdapterRequirements, AdapterRequirement)
 Q_DECLARE_OPERATORS_FOR_FLAGS(AdapterRequirements)
 Q_FLAG_NS(AdapterRequirement)
 
-} // namespace phicore
+} // namespace phicore::adapter
 
-Q_DECLARE_METATYPE(phicore::DeviceEffect)
-Q_DECLARE_METATYPE(phicore::CmdResponse)
-Q_DECLARE_METATYPE(phicore::ActionResponse)
-Q_DECLARE_METATYPE(phicore::ConnectivityStatus)
+Q_DECLARE_METATYPE(phicore::adapter::DeviceEffect)
+Q_DECLARE_METATYPE(phicore::adapter::CmdResponse)
+Q_DECLARE_METATYPE(phicore::adapter::ActionResponse)
+Q_DECLARE_METATYPE(phicore::adapter::ConnectivityStatus)

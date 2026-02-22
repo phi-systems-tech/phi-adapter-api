@@ -6,7 +6,7 @@
 
 #include "discoveryquery.h"
 
-namespace phicore::discovery {
+namespace phicore::adapter::discovery {
 
 struct Discovery
 {
@@ -24,4 +24,4 @@ struct Discovery
 
 using DiscoveryList = QList<Discovery>;
 
-} // namespace phicore::discovery
+} // namespace phicore::adapter::discovery

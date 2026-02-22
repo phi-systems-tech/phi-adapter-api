@@ -6,7 +6,7 @@
 #include <cmath>
 #include <QMetaType>
 
-namespace phicore {
+namespace phicore::adapter {
 
 // ============================================================================
 // Canonical color type for phi-core
@@ -302,6 +302,6 @@ inline void colorToXy(const Color &c, double &outX, double &outY)
     outY = xy.y;
 }
 
-} // namespace phicore
+} // namespace phicore::adapter
 
-Q_DECLARE_METATYPE(phicore::Color)
+Q_DECLARE_METATYPE(phicore::adapter::Color)

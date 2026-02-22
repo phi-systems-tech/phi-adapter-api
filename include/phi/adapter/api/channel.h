@@ -9,7 +9,7 @@
 #include "types.h"
 #include "adapterconfig.h"
 
-namespace phicore {
+namespace phicore::adapter {
 
 // Descriptor + runtime state for a single channel
 struct Channel {
@@ -34,6 +34,6 @@ struct Channel {
 
 using ChannelList = QList<Channel>;
 
-} // namespace phicore
+} // namespace phicore::adapter
 
-Q_DECLARE_METATYPE(phicore::Channel)
+Q_DECLARE_METATYPE(phicore::adapter::Channel)

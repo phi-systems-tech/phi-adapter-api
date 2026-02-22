@@ -2,6 +2,11 @@
 
 Header-only API for phi adapter development (Qt plugin).
 
+## Namespace
+
+Public adapter API symbols live in `namespace phicore::adapter`
+(and `phicore::adapter::discovery` for discovery-specific types).
+
 ## Package Dependency Model
 
 `phi-adapter-api-dev` is intentionally kept slim.

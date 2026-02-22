@@ -11,7 +11,7 @@
 
 #define PHI_ADAPTER_FACTORY_IID "tech.phi-systems.phi-core.AdapterFactory/1.0"
 
-namespace phicore {
+namespace phicore::adapter {
 
 class AdapterInterface;
 
@@ -115,6 +115,6 @@ public:
     virtual AdapterInterface* create(QObject *parent = nullptr) = 0;
 };
 
-} // namespace phicore
+} // namespace phicore::adapter
 
-Q_DECLARE_INTERFACE(phicore::AdapterFactory, PHI_ADAPTER_FACTORY_IID)
+Q_DECLARE_INTERFACE(phicore::adapter::AdapterFactory, PHI_ADAPTER_FACTORY_IID)

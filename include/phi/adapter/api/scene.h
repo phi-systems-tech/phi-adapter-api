@@ -6,7 +6,7 @@
 
 #include "types.h"
 
-namespace phicore {
+namespace phicore::adapter {
 
 // Lightweight scene descriptor emitted by adapters. Core will map these
 // to persisted SceneRecord entries (roomId/groupId resolved via registries).
@@ -24,4 +24,4 @@ struct Scene {
     QJsonObject meta;
 };
 
-} // namespace phicore
+} // namespace phicore::adapter

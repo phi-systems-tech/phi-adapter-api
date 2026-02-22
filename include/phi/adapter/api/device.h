@@ -7,7 +7,7 @@
 
 #include "types.h"
 
-namespace phicore {
+namespace phicore::adapter {
 struct DeviceEffectDescriptor {
     DeviceEffect effect = DeviceEffect::None;
     QString      id;           // optional vendor-specific identifier
@@ -34,4 +34,4 @@ struct Device {
 
 using DeviceList = QList<Device>;
 
-} // namespace phicore
+} // namespace phicore::adapter

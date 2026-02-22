@@ -18,7 +18,7 @@
 
 Q_DECLARE_LOGGING_CATEGORY(adapterLog)
 
-namespace phicore {
+namespace phicore::adapter {
 
 class AdapterManager;
 
@@ -36,24 +36,24 @@ signals:
     void errorOccurred(const QString &msg, const QVariantList &params = {}, const QString &ctx = {});
     void fullSyncCompleted();
 
-    void roomUpdated(const phicore::Room &room);
+    void roomUpdated(const phicore::adapter::Room &room);
     void roomRemoved(const QString &roomId);
-    void groupUpdated(const phicore::Group &group);
+    void groupUpdated(const phicore::adapter::Group &group);
     void groupRemoved(const QString &groupId);
 
-    void deviceUpdated(const phicore::Device &device, const phicore::ChannelList &channels);
+    void deviceUpdated(const phicore::adapter::Device &device, const phicore::adapter::ChannelList &channels);
     void deviceRemoved(const QString &deviceId);
 
-    void channelUpdated(const QString &deviceId, const phicore::Channel &channel);
+    void channelUpdated(const QString &deviceId, const phicore::adapter::Channel &channel);
     void channelRemoved(const QString &deviceId, const QString &channelId);
 
-    void scenesUpdated(const QList<phicore::Scene> &scenes);
+    void scenesUpdated(const QList<phicore::adapter::Scene> &scenes);
 
     void channelStateUpdated(const QString &deviceId, const QString &channelId,
         const QVariant &value, qint64 ts = 0);
 
-    void cmdResult(const phicore::CmdResponse &response);
-    void actionResult(const phicore::ActionResponse &response);
+    void cmdResult(const phicore::adapter::CmdResponse &response);
+    void actionResult(const phicore::adapter::ActionResponse &response);
     void adapterMetaUpdated(const QJsonObject &metaPatch);
 
     // automatically called from startAsync, don't use it - implement start(errorString) only
@@ -151,7 +151,7 @@ protected slots:
     }
 
     virtual void invokeDeviceEffect(const QString &deviceExternalId,
-                                    phicore::DeviceEffect effect,
+                                    phicore::adapter::DeviceEffect effect,
                                     const QString &effectId,
                                     const QJsonObject &params,
                                     CmdId cmdId) {
@@ -203,10 +203,10 @@ private slots:
         emit started(ok, err);
     }
     // Set by AdapterManager before thread start
-    void setAdapter(const phicore::Adapter &info) { m_info = info; }
+    void setAdapter(const phicore::adapter::Adapter &info) { m_info = info; }
 
 private:
     Adapter m_info;
 };
 
-} // namespace phicore
+} // namespace phicore::adapter

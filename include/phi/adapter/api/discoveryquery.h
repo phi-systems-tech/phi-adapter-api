@@ -5,7 +5,7 @@
 #include <QStringList>
 #include <QJsonObject>
 
-namespace phicore::discovery {
+namespace phicore::adapter::discovery {
 
 // The transport/protocol used by a discovery provider.
 enum class DiscoveryKind : quint8 {
@@ -61,4 +61,4 @@ struct DiscoveryQuery
 
 using DiscoveryQueryList = QList<DiscoveryQuery>;
 
-} // namespace phicore::discovery
+} // namespace phicore::adapter::discovery

@@ -8,7 +8,7 @@
 
 #include "types.h"
 
-namespace phicore {
+namespace phicore::adapter {
 
 struct Group {
     QString     id;                 // adapter-specific identifier
@@ -20,4 +20,4 @@ struct Group {
 
 using GroupList = QList<Group>;
 
-} // namespace phicore
+} // namespace phicore::adapter

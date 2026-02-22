@@ -4,7 +4,7 @@
 #include <QtGlobal>
 #include <QMetaType>
 
-namespace phicore {
+namespace phicore::adapter {
 
 enum class DeviceSoftwareUpdateStatus : quint8 {
     Unknown = 0,       // No information yet
@@ -28,6 +28,6 @@ struct DeviceSoftwareUpdate {
     qint64 timestampMs = 0;      // optional UTC ms when the status was observed
 };
 
-} // namespace phicore
+} // namespace phicore::adapter
 
-Q_DECLARE_METATYPE(phicore::DeviceSoftwareUpdate)
+Q_DECLARE_METATYPE(phicore::adapter::DeviceSoftwareUpdate)

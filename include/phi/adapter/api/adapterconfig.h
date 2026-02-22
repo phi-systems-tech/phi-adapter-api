@@ -8,7 +8,7 @@
 
 #include "types.h"
 
-namespace phicore {
+namespace phicore::adapter {
 
 // AdapterInterface-provided configuration/state that plugins can inspect/update.
 struct Adapter {
@@ -91,4 +91,4 @@ struct AdapterCapabilities {
     QJsonObject defaults;          // optional default values (host, port, etc.)
 };
 
-} // namespace phicore
+} // namespace phicore::adapter

@@ -8,7 +8,7 @@
 
 #include "types.h"
 
-namespace phicore {
+namespace phicore::adapter {
 
 struct Room {
     QString     externalId;      // adapter-specific identifier
@@ -20,4 +20,4 @@ struct Room {
 
 using RoomList = QList<Room>;
 
-} // namespace phicore
+} // namespace phicore::adapter
